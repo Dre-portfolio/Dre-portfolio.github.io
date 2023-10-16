@@ -5,10 +5,10 @@
 /*=============== VARIABLES ===============*/
 
 :root {
-    --accent-color: #76BA1B;
-    --background-color: #1E5631;
-    --background-color-2: #4C9A2A;
-    --light-grey: #ACDF87;
+    --accent-color: #4b59db;
+    --background-color: #3e413f;
+    --background-color-2: #2029a5;
+    --light-grey: #0004ff8c;
     --border-radius: 30px;
 }
 
@@ -43,6 +43,9 @@ html {
     font-size: 16px;
     font-family: "Montserrat", sans-serif;
     background-color: var(--background-color);
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 a {
@@ -67,7 +70,7 @@ h2 {
 .col-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 10px;
     width: 100%;
 }
 
@@ -138,6 +141,10 @@ h2 {
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
 }
 
+.school-logo {
+    width: 100px;
+}
+
 .header h1 {
     font-size: 1.5rem;
 }
@@ -190,6 +197,7 @@ h2 {
     height: 100%;
     overflow: auto;
     scroll-behavior: smooth;
+    text-align: justify;
 }
 
 .content-card {
@@ -200,6 +208,11 @@ h2 {
     min-height: 100%;
     margin: 0 50px;
 }
+
+.blue {
+    color: var(--background-color-2);
+}
+
 
 /*=============== HOME SECTION ===============*/
 
@@ -245,15 +258,27 @@ h2 {
 }
 
 .polish {
+    width: 80%;
+}
+
+.polish2 {
     width: 100%;
 }
 
 .english {
-    width: 75%;
+    width: 90%;
+}
+
+.english2 {
+    width: 100%;
 }
 
 .french {
-    width: 50%;
+    width: 70%;
+}
+
+.french2 {
+    width: 85%;
 }
 
 .skill {
@@ -294,7 +319,7 @@ h2 {
 }
 
 .overlay {
-    background: #acdf87be;
+    background: #4b59db6c;
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -307,11 +332,13 @@ h2 {
 
 .project-description {
     line-height: normal;
-    max-width: 200px;
+    max-width: 215px;
     margin: 20px;
     position: absolute;
     left: -250px;
     transition: 0.5s ease;
+    text-align: left;
+    font-size: 0.8rem;
 }
 
 .project-tile:hover .overlay {
@@ -326,11 +353,12 @@ h2 {
     transition: 0.5s ease;
 }
 
+.instruct-img {
+    text-align: center;
+}
+
 /*=============== EXPERIENCE SECTION ===============*/
 
-.experiencetitle{
-    text-decoration: underline;
-}
 .timeline {
     position: relative;
 }
@@ -366,6 +394,35 @@ h2 {
 
 .timeline-item {
     margin: 50px 0;
+}
+
+/*=============== GALLERY ===============*/
+
+.project-list {
+    margin: 20px 0;
+}
+
+.project-tile {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    background: var(--light-grey);
+    color: transparent;
+    width: 100%;
+    height: 300px;
+    margin: auto;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+.project-tile img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    filter: contrast(70%) brightness(110%) grayscale(20%);
 }
 
 /*=============== FORM ===============*/
