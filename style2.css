@@ -43,7 +43,7 @@ html {
     font-size: 16px;
     font-family: "Montserrat", sans-serif;
     background-color: var(--background-color);
-    background-image: url();
+    background-image: url(./images/gif1.gif);
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -80,6 +80,31 @@ h2 {
     justify-content: center;
     height: 100vh;
 }
+
+.filipino {
+    font-size: 2rem;
+}
+
+.blue {
+    color: var(--background-color-2);
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typing 3s,
+        cursor .4s step-end infinite alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cursor {
+    50% { border-color: transparent }
+}
+
+@keyframes typing {
+    from { width: 0 }
+}
+
 
 /*=============== MENU ===============*/
 
@@ -140,6 +165,16 @@ h2 {
     margin-top: 100px;
     box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
 }
+
+.header-img2 {
+    width: 200px;
+    height: auto;
+    
+    
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+}
+
 
 .school-logo {
     width: 100px;
@@ -209,10 +244,6 @@ h2 {
     margin: 0 50px;
 }
 
-.blue {
-    color: var(--background-color-2);
-}
-
 
 /*=============== HOME SECTION ===============*/
 
@@ -220,7 +251,7 @@ h2 {
     font-size: 3.5rem;
     font-weight: bolder;
     text-align: center;
-    margin: 20px;
+    
 }
 
 /*=============== ABOUT SECTION ===============*/
@@ -361,6 +392,7 @@ h2 {
 
 .timeline {
     position: relative;
+    margin-bottom: 2rem;
 }
 
 .timeline::before {
@@ -395,6 +427,13 @@ h2 {
 .timeline-item {
     margin: 50px 0;
 }
+
+/*=============== MORAL SECTION ===============*/
+
+.video {
+    margin-top: 1rem;
+}
+
 
 /*=============== GALLERY ===============*/
 
@@ -501,6 +540,9 @@ textarea {
 @media screen and (max-width: 1200px) {
     html {
         scroll-behavior: smooth;
+        background-color: var(--background-color);
+        background-image: url(./images/);
+        background-size: cover;
     }
 
     .container {
@@ -562,6 +604,10 @@ textarea {
 }
 
 @media screen and (max-width: 750px) {
+    .video {
+        width: 500px;
+    }
+
     .col-2 {
         grid-template-columns: 1fr;
     }
@@ -591,6 +637,52 @@ textarea {
         padding: 0;
         width: 0;
         height: 0;
+    }
+
+}
+
+@media screen and (max-width: 690px) {
+    .video {
+        width: 400px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .video {
+        width: 350px;
+    }
+
+}
+
+@media screen and (max-width: 490px) {
+    .video {
+        width: 300px;
+    }
+    .about-me {
+        font-size: .9rem;
+    }
+    .physical-self {
+        font-size: .9rem;
+    }
+    .sexual-self {
+        font-size: .9rem;
+    }
+    .digital1 {
+        font-size: .9rem;
+    }
+    .digital2 {
+        font-size: .9rem;
+    }
+    .digital3 {
+        font-size: .9rem;
+    }
+
+}
+
+@media screen and (max-width: 430px) {
+    .video {
+        width: 250px;
     }
 
 }
